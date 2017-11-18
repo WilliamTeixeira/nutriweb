@@ -22,19 +22,6 @@ public class AlimentoTest {
     public AlimentoTest() {
     }
     
-    /*@BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    */
-    
     /**
      * Teste do metodo getIdalimento: classe Alimento.
      */
@@ -45,7 +32,6 @@ public class AlimentoTest {
         int expResult = 1;
         int result = obj.getIdalimento();
         assertEquals(expResult, result);
-        fail("Deveria retornar o valor 1");
     }
     
     /**
@@ -57,7 +43,6 @@ public class AlimentoTest {
         int idalimento = 1;
         Alimento obj = new Alimento();
         obj.setIdalimento(idalimento);
-        fail("Deveria permitir setar o id 1.");
     }
     
     /**
@@ -70,7 +55,6 @@ public class AlimentoTest {
         String expResult = "Alimento 1";
         String result = obj.getDescricao();
         assertEquals(expResult, result);
-        fail("Deveria apresentar a descrição: Alimento 1");
     }
     
     /**
@@ -82,7 +66,6 @@ public class AlimentoTest {
         String descricao = "Alimento 1";
         Alimento obj = new Alimento(1, "", 0, "un");
         obj.setDescricao(descricao);
-        fail("Deveria permitir setar a descrição: Alimento 1");
     }
     
     /**
@@ -95,7 +78,6 @@ public class AlimentoTest {
         int expResult = 0;
         int result = obj.getCal();
         assertEquals(expResult, result);
-        fail("Deveria retornar o int: 0");
     }
     
     /**
@@ -107,7 +89,6 @@ public class AlimentoTest {
         int cal = 0;
         Alimento obj = new Alimento(1);
         obj.setCal(cal);
-        fail("Deveria permitir setar o int: 0.");
     }
     
     /**
@@ -120,7 +101,6 @@ public class AlimentoTest {
         String expResult = "un";
         String result = obj.getUnidade();
         assertEquals(expResult, result);
-        fail("Deveria retornar a string: un");
     }
     
     /**
@@ -132,7 +112,6 @@ public class AlimentoTest {
         String unidade = "un";
         Alimento obj = new Alimento(1, "", 0, "");
         obj.setUnidade(unidade);
-        fail("Deveria permitir setar a string: un");
     }
     
     /**
@@ -142,10 +121,9 @@ public class AlimentoTest {
     public void testHashCodeDifNull() {
         System.out.println("Teste hashCode - id diferente de null");
         Alimento obj = new Alimento(1);
-        int expResult = 1 + obj.getIdalimento().hashCode();
+        int expResult = obj.getIdalimento().hashCode();
         int result = obj.hashCode();
         assertEquals(expResult, result);
-        fail("Deveria retornar: i + hashcode do idalimento");
     }
     
     /**
@@ -158,7 +136,6 @@ public class AlimentoTest {
         int expResult = 0;
         int result = obj.hashCode();
         assertEquals(expResult, result);
-        fail("Deveria retornar: 0");
     }
     
     /**
@@ -172,7 +149,6 @@ public class AlimentoTest {
         boolean expResult = false;
         boolean result = obj.equals(outroObj);
         assertEquals(expResult, result);
-        fail("Deveria retornar false");
     }
     
     /**
@@ -186,7 +162,6 @@ public class AlimentoTest {
         boolean expResult = true;
         boolean result = obj.equals(outroObj);
         assertEquals(expResult, result);
-        fail("Deveria retornar true");
     }
     
     /**
@@ -199,7 +174,6 @@ public class AlimentoTest {
         String expResult = "Model.Alimento[ idalimento=" + 1 + " ]";
         String result = obj.toString();
         assertEquals(expResult, result);
-        fail("Deveria retornar: Model.Alimento[ idalimento= 1  ]");
     }
     
     @After
