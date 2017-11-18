@@ -18,11 +18,11 @@ import static org.junit.Assert.*;
  * @author william
  */
 public class AlimentoTest {
-    
+
     public AlimentoTest() {
     }
-    
-    @BeforeClass
+
+    /*@BeforeClass
     public static void setUpClass() {
     }
     
@@ -33,187 +33,176 @@ public class AlimentoTest {
     @Before
     public void setUp() {
     }
+     */
     
-    @After
-    public void tearDown() {
-    }
-
     /**
-     * Test of getIdalimento method, of class Alimento.
+     * Teste do metodo getIdalimento: classe Alimento.
      */
     @Test
     public void testGetIdalimento() {
-        System.out.println("getIdalimento");
-        Alimento instance = new Alimento();
-        Integer expResult = null;
-        Integer result = instance.getIdalimento();
+        System.out.println("Teste getIdalimento");
+        Alimento obj = new Alimento(1);
+        int expResult = 1;
+        int result = obj.getIdalimento();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        fail("Deveria retornar o valor 1");
     }
 
     /**
-     * Test of setIdalimento method, of class Alimento.
+     * Teste do metodo setIdalimento: classe Alimento.
      */
     @Test
     public void testSetIdalimento() {
-        System.out.println("setIdalimento");
-        Integer idalimento = null;
-        Alimento instance = new Alimento();
-        instance.setIdalimento(idalimento);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Teste setIdalimento");
+        int idalimento = 1;
+        Alimento obj = new Alimento();
+        obj.setIdalimento(idalimento);
+        fail("Deveria permitir setar o id 1.");
     }
 
     /**
-     * Test of getDescricao method, of class Alimento.
+     * Teste do metodo getDescricao: classe Alimento
      */
     @Test
     public void testGetDescricao() {
-        System.out.println("getDescricao");
-        Alimento instance = new Alimento();
-        String expResult = "";
-        String result = instance.getDescricao();
+        System.out.println("Teste getDescricao");
+        Alimento obj = new Alimento(1, "Alimento 1", 0, "un");
+        String expResult = "Alimento 1";
+        String result = obj.getDescricao();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        fail("Deveria apresentar a descrição: Alimento 1");
     }
 
     /**
-     * Test of setDescricao method, of class Alimento.
+     * Teste do metodo setDescricao: classe Alimento
      */
     @Test
     public void testSetDescricao() {
-        System.out.println("setDescricao");
-        String descricao = "";
-        Alimento instance = new Alimento();
-        instance.setDescricao(descricao);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Teste setDescricao");
+        String descricao = "Alimento 1";
+        Alimento obj = new Alimento(1, "", 0, "un");
+        obj.setDescricao(descricao);
+        fail("Deveria permitir setar a descrição: Alimento 1");
     }
 
     /**
-     * Test of getCal method, of class Alimento.
+     * Teste do metodo getCal: classe Alimento
      */
     @Test
     public void testGetCal() {
-        System.out.println("getCal");
-        Alimento instance = new Alimento();
+        System.out.println("Teste getCal");
+        Alimento obj = new Alimento(1, "", 0, "un");
         int expResult = 0;
-        int result = instance.getCal();
+        int result = obj.getCal();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        fail("Deveria retornar o int: 0");
     }
 
     /**
-     * Test of setCal method, of class Alimento.
+     * Teste setCal: classe Alimento
      */
     @Test
     public void testSetCal() {
-        System.out.println("setCal");
+        System.out.println("Teste setCal");
         int cal = 0;
-        Alimento instance = new Alimento();
-        instance.setCal(cal);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Alimento obj = new Alimento(1);
+        obj.setCal(cal);
+        fail("Deveria permitir setar o int: 0.");
     }
 
     /**
-     * Test of getUnidade method, of class Alimento.
+     * Teste getUnidade: classe Alimento
      */
     @Test
     public void testGetUnidade() {
-        System.out.println("getUnidade");
-        Alimento instance = new Alimento();
-        String expResult = "";
-        String result = instance.getUnidade();
+        System.out.println("Teste getUnidade");
+        Alimento obj = new Alimento(1, "", 0, "un");
+        String expResult = "un";
+        String result = obj.getUnidade();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        fail("Deveria retornar a string: un");
     }
 
     /**
-     * Test of setUnidade method, of class Alimento.
+     * Teste do metodo setUnidade: classe Alimento
      */
     @Test
     public void testSetUnidade() {
-        System.out.println("setUnidade");
-        String unidade = "";
-        Alimento instance = new Alimento();
-        instance.setUnidade(unidade);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Teste setUnidade");
+        String unidade = "un";
+        Alimento obj = new Alimento(1, "", 0, "");
+        obj.setUnidade(unidade);
+        fail("Deveria permitir setar a string: un");
     }
 
     /**
-     * Test of getConsumoDiarioAlimentoList method, of class Alimento.
+     * Teste do meto override Hashcode com id diferente de null: Classe Alimento
      */
     @Test
-    public void testGetConsumoDiarioAlimentoList() {
-        System.out.println("getConsumoDiarioAlimentoList");
-        Alimento instance = new Alimento();
-        List<ConsumoDiarioAlimento> expResult = null;
-        List<ConsumoDiarioAlimento> result = instance.getConsumoDiarioAlimentoList();
+    public void testHashCodeDifNull() {
+        System.out.println("Teste hashCode - id diferente de null");
+        Alimento obj = new Alimento(1);
+        int expResult = 1 + obj.getIdalimento().hashCode();
+        int result = obj.hashCode();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        fail("Deveria retornar: i + hashcode do idalimento");
     }
 
     /**
-     * Test of setConsumoDiarioAlimentoList method, of class Alimento.
+     * Teste do meto override Hashcode com id igual a null: Classe Alimento
      */
     @Test
-    public void testSetConsumoDiarioAlimentoList() {
-        System.out.println("setConsumoDiarioAlimentoList");
-        List<ConsumoDiarioAlimento> consumoDiarioAlimentoList = null;
-        Alimento instance = new Alimento();
-        instance.setConsumoDiarioAlimentoList(consumoDiarioAlimentoList);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of hashCode method, of class Alimento.
-     */
-    @Test
-    public void testHashCode() {
-        System.out.println("hashCode");
-        Alimento instance = new Alimento();
+    public void testHashCodeNull() {
+        System.out.println("Teste hashCode - id null");
+        Alimento obj = new Alimento();
         int expResult = 0;
-        int result = instance.hashCode();
+        int result = obj.hashCode();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        fail("Deveria retornar: 0");
     }
 
     /**
-     * Test of equals method, of class Alimento.
+     * Teste override do equals com objetos diferentes: classe Alimento
+     */
+    @Test
+    public void testEqualsObjDiferente() {
+        System.out.println("Teste equals: false");
+        Object outroObj = null;
+        Alimento obj = new Alimento();
+        boolean expResult = false;
+        boolean result = obj.equals(outroObj);
+        assertEquals(expResult, result);
+        fail("Deveria retornar false");
+    }
+
+    /**
+     * Teste override do equals com objetos iguais: classe Alimento
      */
     @Test
     public void testEquals() {
-        System.out.println("equals");
-        Object object = null;
-        Alimento instance = new Alimento();
-        boolean expResult = false;
-        boolean result = instance.equals(object);
+        System.out.println("Teste equals: true");
+        Alimento outroObj = new Alimento(1);
+        Alimento obj = new Alimento(1);
+        boolean expResult = true;
+        boolean result = obj.equals(outroObj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        fail("Deveria retornar true");
     }
 
     /**
-     * Test of toString method, of class Alimento.
+     * Teste override do toString: classe Alimento
      */
     @Test
     public void testToString() {
-        System.out.println("toString");
-        Alimento instance = new Alimento();
-        String expResult = "";
-        String result = instance.toString();
+        System.out.println("Teste do toString");
+        Alimento obj = new Alimento(1);
+        String expResult = "Model.Alimento[ idalimento=" + 1 + " ]";
+        String result = obj.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        fail("Deveria retornar: Model.Alimento[ idalimento= 1  ]");
     }
-    
+
+    @After
+    public void tearDown() {
+    }
 }
