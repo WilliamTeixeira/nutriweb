@@ -1,8 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+* To change this license header, choose License Headers in Project Properties.
+* To change this template file, choose Tools | Templates
+* and open the template in the editor.
+*/
 package Model;
 
 import java.util.List;
@@ -18,10 +18,10 @@ import static org.junit.Assert.*;
  * @author william
  */
 public class AlimentoTest {
-
+    
     public AlimentoTest() {
     }
-
+    
     /*@BeforeClass
     public static void setUpClass() {
     }
@@ -33,7 +33,7 @@ public class AlimentoTest {
     @Before
     public void setUp() {
     }
-     */
+    */
     
     /**
      * Teste do metodo getIdalimento: classe Alimento.
@@ -47,7 +47,7 @@ public class AlimentoTest {
         assertEquals(expResult, result);
         fail("Deveria retornar o valor 1");
     }
-
+    
     /**
      * Teste do metodo setIdalimento: classe Alimento.
      */
@@ -59,7 +59,7 @@ public class AlimentoTest {
         obj.setIdalimento(idalimento);
         fail("Deveria permitir setar o id 1.");
     }
-
+    
     /**
      * Teste do metodo getDescricao: classe Alimento
      */
@@ -72,7 +72,7 @@ public class AlimentoTest {
         assertEquals(expResult, result);
         fail("Deveria apresentar a descrição: Alimento 1");
     }
-
+    
     /**
      * Teste do metodo setDescricao: classe Alimento
      */
@@ -84,7 +84,7 @@ public class AlimentoTest {
         obj.setDescricao(descricao);
         fail("Deveria permitir setar a descrição: Alimento 1");
     }
-
+    
     /**
      * Teste do metodo getCal: classe Alimento
      */
@@ -97,7 +97,7 @@ public class AlimentoTest {
         assertEquals(expResult, result);
         fail("Deveria retornar o int: 0");
     }
-
+    
     /**
      * Teste setCal: classe Alimento
      */
@@ -109,7 +109,7 @@ public class AlimentoTest {
         obj.setCal(cal);
         fail("Deveria permitir setar o int: 0.");
     }
-
+    
     /**
      * Teste getUnidade: classe Alimento
      */
@@ -122,7 +122,7 @@ public class AlimentoTest {
         assertEquals(expResult, result);
         fail("Deveria retornar a string: un");
     }
-
+    
     /**
      * Teste do metodo setUnidade: classe Alimento
      */
@@ -134,7 +134,7 @@ public class AlimentoTest {
         obj.setUnidade(unidade);
         fail("Deveria permitir setar a string: un");
     }
-
+    
     /**
      * Teste do meto override Hashcode com id diferente de null: Classe Alimento
      */
@@ -147,7 +147,7 @@ public class AlimentoTest {
         assertEquals(expResult, result);
         fail("Deveria retornar: i + hashcode do idalimento");
     }
-
+    
     /**
      * Teste do meto override Hashcode com id igual a null: Classe Alimento
      */
@@ -160,7 +160,7 @@ public class AlimentoTest {
         assertEquals(expResult, result);
         fail("Deveria retornar: 0");
     }
-
+    
     /**
      * Teste override do equals com objetos diferentes: classe Alimento
      */
@@ -174,7 +174,7 @@ public class AlimentoTest {
         assertEquals(expResult, result);
         fail("Deveria retornar false");
     }
-
+    
     /**
      * Teste override do equals com objetos iguais: classe Alimento
      */
@@ -188,7 +188,7 @@ public class AlimentoTest {
         assertEquals(expResult, result);
         fail("Deveria retornar true");
     }
-
+    
     /**
      * Teste override do toString: classe Alimento
      */
@@ -201,7 +201,7 @@ public class AlimentoTest {
         assertEquals(expResult, result);
         fail("Deveria retornar: Model.Alimento[ idalimento= 1  ]");
     }
-
+    
     @After
     public void tearDown() {
     }
