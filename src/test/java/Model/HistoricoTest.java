@@ -32,6 +32,55 @@ public class HistoricoTest {
         double result = obj.imc();
         assertEquals(expResult, result, 0.0);
     }
+    
+    /**
+     * Teste do meto override Hashcode com id diferente de null: Classe Historico
+     */
+    @Test
+    public void testHashCodeDifNull() {
+        System.out.println("Teste hashCode - historicoPK diferente de null");
+        Historico obj = new Historico(new HistoricoPK(1,1));
+        int expResult = obj.getHistoricoPK().hashCode();
+        int result = obj.hashCode();
+        assertEquals(expResult, result);
+    }
 
+    /**
+     * Teste do meto override Hashcode com historicoPK igual a null: Classe Historico
+     */
+    @Test
+    public void testHashCodeNull() {
+        System.out.println("Teste hashCode - historicoPK null");
+        Historico obj = new Historico(null);
+        int expResult = 0;
+        int result = obj.hashCode();
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Teste override do equals com objetos diferentes: classe Historico
+     */
+    @Test
+    public void testEqualsObjDiferente() {
+        System.out.println("Teste equals: false");
+        Object outroObj = null;
+        Historico obj = new Historico();
+        boolean expResult = false;
+        boolean result = obj.equals(outroObj);
+        assertEquals(expResult, result);
+    }
+    
+    /**
+     * Teste override do equals com objetos iguais: classe Historico
+     */
+    @Test
+    public void testEquals() {
+        System.out.println("Teste equals: true");
+        Historico outroObj = new Historico(1,1);
+        Historico obj = new Historico(1,1);
+        boolean expResult = true;
+        boolean result = obj.equals(outroObj);
+        assertEquals(expResult, result);
+    }
     
 }
